@@ -95,7 +95,7 @@
 function check() {
     let msg = document.getElementById("msg").value;
 
-    fetch("http://localhost:3000/predict", {
+    fetch("https://spam-and-ham-cv66.onrender.com/predict", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
