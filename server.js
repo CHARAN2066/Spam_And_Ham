@@ -19,7 +19,7 @@ app.post("/predict", (req, res) => {
         if (error) {
             return res.send("Error");
         }
-        res.send({ result: stdout.trim() });
+        res.json({ result: stdout.trim() });
     });
 });
 
