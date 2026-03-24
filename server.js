@@ -17,7 +17,7 @@ app.post("/predict", (req, res) => {
 
     exec(`python3 predict.py "${message}"`, (error, stdout, stderr) => {
         if (error) {
-            return res.send("Error");
+            return res.json({ result: "Error" });
         }
         res.json({ result: stdout.trim() });
     });
